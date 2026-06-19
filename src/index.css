@@ -1,0 +1,72 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background: #0D0A1E;
+  color: #EDE8FF;
+  font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+}
+
+/* Scrollbar oculta */
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+/* Selección de texto */
+::selection {
+  background: #7B4FD466;
+  color: #EDE8FF;
+}
+
+/* Focus visible accesible */
+:focus-visible {
+  outline: 2px solid #9B6FF4;
+  outline-offset: 2px;
+}
+
+/* Inputs globales */
+input, textarea, button {
+  font-family: inherit;
+}
+
+/* Animaciones base */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+/* Tap highlight mobile */
+button, a {
+  -webkit-tap-highlight-color: transparent;
+}
